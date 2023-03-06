@@ -1,0 +1,18 @@
+#container {
+    display: flex;
+    position: relative;
+    margin: 25%;
+    flex-direction: row;
+    width: 50%;
+    height: 75%;
+    background-color: aqua;
+
+}
+
+#result{
+    
+}
+
+#summary {
+
+}
