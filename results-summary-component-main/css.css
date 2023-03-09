@@ -4,10 +4,13 @@ body {
     
 }
 
-#super {
-    height: 100%;
-    width: 100%;
+
+#summary h3 {
+
+    color: hsl(224, 30%, 27%);
+
 }
+
 h3 {
     color: hsl(241, 100%, 89%);
 }
@@ -21,20 +24,66 @@ span {
     font-weight: 800;
 }
 
-p {
+#result p {
     font-size: 0.7rem;
     margin-top: -0.5rem;
     color: hsl(241, 100%, 89%)
+}
+
+
+img {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+
+.yellow p {
+    font-size: 0.75rem;
+    color: hsl(224, 30%, 27%);
+}
+
+.white p {
+    font-size: 0.75rem;
+    color: hsl(224, 30%, 27%);
+}
+
+#reaction p{
+    color: hsl(0, 100%, 67%);
+    
+}
+
+#memory p{
+    color: hsla(39, 100%, 56%);
+}
+
+#verbal p{
+    color: hsl(166, 100%, 37%);
+}
+
+#visual p{
+    color: hsl(234, 85%, 45%)
+}
+
+#reaction, #memory, #verbal, #visual {
+    display: flex;
+
+}
+
+p span {
+    font-size: 0.7rem;
+    color: gray
 }
 
 #container {
     display: flex;
     position: relative;
     flex-direction: row;
-    width: 35%;
+    width: 40%;
     height: 50%;
-    background-color: aqua;
+    margin: auto;
+    margin-top: 12%;
     border-radius: 1.5rem;
+    box-shadow: 20px 27px 64px -12px hsl(221, 60%, 90%);
 
 }
 
@@ -54,30 +103,45 @@ p {
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    justify-content: space-evenly;
+    
 
 }
 
 .white {
-    padding: 0.5rem;
+    
+    background-color: hsl(166, 100%, 97%);
+    
+}
+
+.white , .yellow {
+
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    padding: 0.2rem 0.7rem; 
     margin-bottom: 0.5rem;
     border-radius: 0.7rem;
-    background-color: red;
-    height: 1.5rem;
+    justify-content: space-between;
 }
 
 .yellow {
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    border-radius: 0.7rem;
-    background-color: blue;
-    max-height: fit-content;
-    height: 1.5rem;
+    
+    background-color: hsl(39, 100%, 97%);
+    
 }
 
 button {
 
-    height: 2rem;
+    height: 2.5rem;
     margin-top: 1rem;
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 5rem;
+    border: 0;
+    color: white;
+    font-weight: 800;
     
 }
 
@@ -85,13 +149,17 @@ button {
 
     background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
     border-radius: 5rem ;
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 8.5rem;
+    height: 8.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+}
+
+button:active {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
 .attribuition {
