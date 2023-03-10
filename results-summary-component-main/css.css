@@ -1,7 +1,7 @@
 body {
 
     font-family: 'Hanken Grotesk', sans-serif;
-    
+    margin: 0;
 }
 
 
@@ -26,8 +26,13 @@ span {
 
 #result p {
     font-size: 0.7rem;
+    color: hsl(241, 100%, 89%);
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+#circle p {
     margin-top: -0.5rem;
-    color: hsl(241, 100%, 89%)
 }
 
 
@@ -37,15 +42,13 @@ img {
 }
 
 
-.yellow p {
+.yellow p , .white p {
     font-size: 0.75rem;
     color: hsl(224, 30%, 27%);
+    white-space: nowrap;
 }
 
-.white p {
-    font-size: 0.75rem;
-    color: hsl(224, 30%, 27%);
-}
+ 
 
 #reaction p{
     color: hsl(0, 100%, 67%);
@@ -78,7 +81,7 @@ p span {
     display: flex;
     position: relative;
     flex-direction: row;
-    width: 40%;
+    width: fit-content;
     height: 50%;
     margin: auto;
     margin-top: 12%;
@@ -91,18 +94,19 @@ p span {
     text-align: center;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 11rem;
     background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 2rem;
     border-radius: 1.5rem;
+    justify-content: space-between;
 }
 
 #summary {
-    width: 50%;
+    width: 11rem;
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 2rem;
     background-color: white;
     border-radius: 1.5rem;
     justify-content: space-evenly;
@@ -131,6 +135,10 @@ p span {
     
     background-color: hsl(39, 100%, 97%);
     
+}
+
+div.yellow > p , div.white > p {
+    margin-left: 2.5rem;
 }
 
 button {
@@ -167,4 +175,27 @@ button:active {
     position: absolute;
     top: 50rem;
  
+}
+
+@media (max-width: 425px) {
+
+    
+    #container {
+        flex-direction: column;
+        flex-flow: wrap;
+        margin: 0;
+    }
+
+    #result {
+        height: 50%;
+    }
+
+    #result , #summary {
+        width: 100%;
+        border-radius: 0 0 1.5rem 1.5rem;
+    }
+
+    #result p {
+        white-space: normal;
+    }
 }
